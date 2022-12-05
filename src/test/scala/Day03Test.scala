@@ -1,4 +1,4 @@
-val test03Input =
+val test03Input: String =
   """vJrwpWtwJgWrhcsFMMfFFhFp
     |jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
     |PmmdzqPrVvPwwTWBwg
@@ -6,7 +6,7 @@ val test03Input =
     |ttgJtRGJQctTZtZT
     |CrZsJsPPZsGzwwsLwLmpwMDw""".stripMargin
 
-val test03ParsedInput = List(
+val test03ParsedInput: List[Rucksack] = List(
   Rucksack("vJrwpWtwJgWrhcsFMMfFFhFp"),
   Rucksack("jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL"),
   Rucksack("PmmdzqPrVvPwwTWBwg"),
