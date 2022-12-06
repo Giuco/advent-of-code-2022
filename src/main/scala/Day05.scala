@@ -35,16 +35,14 @@ class Day05 extends Puzzle[Game, String] {
 
   def doMove(stacks: List[List[Char]], movement: Movement, doubleMov: Boolean): List[List[Char]] =
     val toMove = stacks(movement.from - 1).take(movement.qtd)
+    val toMoveAdjusted: List[Char] = if(doubleMov) toMove else toMove.reverse
     val newFrom = stacks(movement.from - 1).drop(movement.qtd)
-    val newTo = (if (doubleMov) toMove else toMove.reverse) ++ stacks(movement.to - 1)
-    (1 until stacks.length + 1)
-      .zip(stacks)
-      .map((i: Int, s: List[Char]) => if (i == movement.from) (i, newFrom) else (i, s))
-      .map((i: Int, s: List[Char]) => if (i == movement.to) (i, newTo) else (i, s))
-      .map(_._2)
-      .toList
-
-
+    val newTo = toMoveAdjusted ++ stacks(movement.to - 1)
+    
+    stacks
+      .updated(movement.from-1, newFrom)
+      .updated(movement.to-1, newTo)
+  
   override def problem1(input: Game): String =
     val finalStacks = input.ops
       .foldLeft(input.stacks)((s: List[List[Char]], m: Movement) => doMove(s, m, false))
