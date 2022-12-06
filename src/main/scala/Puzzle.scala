@@ -15,7 +15,7 @@ trait Puzzle[I, R] {
   }
 
   def readInput(): String =
-    scala.io.Source.fromFile(s"./data/day01/$puzzleId.txt").mkString
+    scala.io.Source.fromFile(s"./data/$puzzleId.txt").mkString
 
   def printSolutions(): Unit =
     val rawInput = readInput()
