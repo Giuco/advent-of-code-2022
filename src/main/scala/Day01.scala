@@ -1,4 +1,4 @@
-class Day01 extends Puzzle[List[List[Int]], Int] {
+class Day01 extends Puzzle[List[List[Int]], Int, Int] {
   val puzzleId = "01"
 
   def parseInput(input: String): List[List[Int]] =

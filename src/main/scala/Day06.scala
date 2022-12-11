@@ -1,4 +1,4 @@
-class Day06 extends Puzzle[List[Char], Int] {
+class Day06 extends Puzzle[List[Char], Int, Int] {
   val puzzleId = "06"
 
   override def parseInput(input: String): List[Char] = input.toList

@@ -1,4 +1,4 @@
-class Day02 extends Puzzle[List[(String, String)], Int]{
+class Day02 extends Puzzle[List[(String, String)], Int, Int]{
   val puzzleId = "02"
   val handMap = Map(
     "A" -> "R",

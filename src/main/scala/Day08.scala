@@ -1,6 +1,6 @@
 type Matrix[A] = List[List[A]]
 
-class Day08 extends Puzzle[Matrix[Int], Int] {
+class Day08 extends Puzzle[Matrix[Int], Int, Int] {
   val puzzleId = "08"
 
   override def parseInput(input: String): Matrix[Int] =

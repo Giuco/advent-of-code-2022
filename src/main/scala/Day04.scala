@@ -1,6 +1,6 @@
 case class IntervalPair(a: (Int, Int), b: (Int, Int)) {}
 
-class Day04 extends Puzzle[List[IntervalPair], Int] {
+class Day04 extends Puzzle[List[IntervalPair], Int, Int] {
   val puzzleId = "04"
 
   def parseRow(input: String): IntervalPair =

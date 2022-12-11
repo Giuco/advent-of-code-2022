@@ -5,7 +5,7 @@ case class Game(stacks: List[List[Char]], ops: List[Movement]) {}
 
 case class Movement(qtd: Int, from: Int, to: Int) {}
 
-class Day05 extends Puzzle[Game, String] {
+class Day05 extends Puzzle[Game, String, String] {
   val puzzleId = "05"
 
   def parseMovements(input: String): List[Movement] =

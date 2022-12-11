@@ -9,7 +9,7 @@ case class Rucksack(rawContents: String) {
 }
 
 
-class Day03 extends Puzzle[List[Rucksack], Int] {
+class Day03 extends Puzzle[List[Rucksack], Int, Int] {
   override val puzzleId: String = "03"
 
   override def parseInput(input: String): List[Rucksack] =

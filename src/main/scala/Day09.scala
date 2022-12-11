@@ -2,7 +2,7 @@ case class Pos(i: Int, j: Int) {}
 
 case class Mov(direction: Char, distance: Int) {}
 
-class Day09 extends Puzzle[List[Mov], Int] {
+class Day09 extends Puzzle[List[Mov], Int, Int] {
   val puzzleId = "09"
 
   override def parseInput(input: String): List[Mov] =
@@ -82,5 +82,5 @@ class Day09 extends Puzzle[List[Mov], Int] {
 
 
 object Day09 extends App {
-  Day09().printSolutions()
+  Day09().printSolutions() // BJFRHRFU
 }

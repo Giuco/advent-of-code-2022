@@ -2,7 +2,7 @@ type FileSystem = Map[List[String], Int]
 
 case class Command(input: List[String], output: String) {}
 
-class Day07 extends Puzzle[List[Command], Int] {
+class Day07 extends Puzzle[List[Command], Int, Int] {
   val puzzleId = "07"
 
   override def parseInput(input: String): List[Command] =
